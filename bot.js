@@ -371,4 +371,21 @@ message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخ�
 
 
 
+
+
+
+client.on('ready', () => {
+    setInterval(function(){
+        client.guilds.get('493842175491309608').roles.find('name', '𝖳𝖧𝖤 𝖫𝖤𝖠𝖣𝖤𝖱 𝖮𝖥 𝖳𝖧𝖤 𝖡𝖠𝖭𝖣').edit({color: 'RANDOM'})
+    },1000);
+  
+
+})
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
