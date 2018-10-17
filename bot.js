@@ -297,7 +297,7 @@ client.on('message',async message => {
         day = currentTime.getDate(),
         week = currentTime.getDay();
  
-        if (minutes < 9) {
+        if (minutes < 10) {
             minutes = "0" + minutes;
         }
         var suffix = "AM";
