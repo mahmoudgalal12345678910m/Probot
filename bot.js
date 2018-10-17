@@ -359,11 +359,15 @@ client.on('message',async message => {
       }
     });
 
- client.on('guildMemberAdd', member => {
-          member.createDM().then(function (channel) {
-       return channel.send("**`سيرفر للمحترفين والجيمر تعالى` \n [https://discord.gg/h7FE8bQ]**")
-          }
-          )});
+
+client.on('message',function(message) {
+	let prefix = "1";
+let args = message.content.split(" ").slice(1).join(" ");
+if(message.content.startsWith(prefix + "say")) {
+if(!args) return;
+message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
+}
+});
 
 
 
