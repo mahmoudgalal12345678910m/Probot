@@ -7,12 +7,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', msg => {
-  if (msg.content === 'رابط') {
-    msg.reply('https://discord.gg/h7FE8bQ !');
-  }
-});
-
 client.on('ready', () => {
     client.user.setActivity("1help | OneFamily ",{type: 'WATCHING'})
 
@@ -25,6 +19,8 @@ client.on('message', message => {
 .setColor('RANDOM')
         .setDescription(`**
 General's Commands. 
+البوت مانع الشتايم 
+البوت يصنع ترحيب ويرسل روابط ومانع للروابط
 ${prefix}bc - رساله لكل الى فى السيرفر :scroll:
 ${prefix}ownerbots - يجيب لك رابط اى بوت :smile:
 !inv - لدعوة البوت :pen_fountain:  **`)
@@ -231,6 +227,39 @@ client.on('message', async message => {
               })
             }
           })
+
+
+
+
+
+
+
+
+
+
+
+client.on('ready',async () => {
+  let GUILDID = '493842175491309608'; // اي دي السيرفر
+  let CHANNELID = '501905634619555840'; // اي دي الروم
+  voiceStay(GUILDID, CHANNELID);
+  function voiceStay(guildid, channelid) {
+    if(!guildid) throw new Error('Syntax: voiceStay function requires guildid');
+    if(!channelid) throw new Error('Syntax: voiceStay function requires channelid');
+
+    let guild = client.guilds.get(guildid);
+    let channel = guild.channels.get(channelid);
+
+    if(channel.type === 'voice') {
+      channel.join().catch(e => {
+        console.log(`Failed To Join :: ${e.message}`);
+      });
+    } else {
+      console.log(`Channel Type :: ${channel.type}, It must be Voice.`);
+    }
+  }
+});
+
+
 
 
 
