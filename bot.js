@@ -226,7 +226,7 @@ client.on('message', async message => {
             text = co.first().content
 
               message.channel.send(`تم حفظ اقتراحك الرجاء`)
-                client.channels.get("501934508178800640").send(`${message.author.username}'s sug => ${text}`)
+                client.channels.get("501934508178800640").send(`${message.author.username}'s said => ${text}`)
 
               })
             }
