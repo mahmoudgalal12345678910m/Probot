@@ -297,11 +297,11 @@ client.on('message',async message => {
         day = currentTime.getDate(),
         week = currentTime.getDay();
  
-        if (minutes < 20) {
+        if (minutes < 9) {
             minutes = "0" + minutes;
         }
         var suffix = "AM";
-        if (hours >= 11) {
+        if (hours >= 12) {
             suffix = "PM";
             hours = hours - 12;
         }
