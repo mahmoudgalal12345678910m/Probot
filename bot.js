@@ -4,7 +4,7 @@ const prefix = "1"
 const yourID = "200644160179535872"
 const setupCMD = "!createrolemessage"
 let initialMessage = `@everyone  وبيظهرلك شنلات فويس للى تبيه :tada:`;
-const roles = ["Talker", "GAMING"];
+const roles = ["Swalef", "GAMING"];
 const reactions = ["💻", "😃",];
 
 client.on('ready', () => {
