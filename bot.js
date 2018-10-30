@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 const prefix = "1"
 const yourID = "200644160179535872"
 const setupCMD = "!createrolemessage"
