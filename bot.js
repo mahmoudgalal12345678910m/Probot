@@ -1,7 +1,11 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client();
 const prefix = "1"
-
+const yourID = "200644160179535872"
+const setupCMD = "!createrolemessage"
+let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
+const roles = ["Family", "Gaming"];
+const reactions = ["💻", "😃",];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -391,27 +395,18 @@ client.on('ready', function(){
 
 })
 
-const yourID = "200644160179535872"
-const setupCMD = "!createrolemessage"
-let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const roles = ["Talker", "GAMING"];
-const reactions = ["💻","😃",];
-const botToken = ""
 
-const Discord = require('discord.js');
-const bot = new Discord.Client();
-bot.login(botToken);
+
+
 
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
-
 
 function generateMessages(){
     var messages = [];
     messages.push(initialMessage);
-    for (let role of roles) messages.push(`React below to get the **"${role}"** role!`); 
+    for (let role of roles) messages.push(`React below to get the **"${role}"** role!`); //DONT CHANGE THIS
     return messages;
 }
-
 
 bot.on("message", message => {
     if (message.author.id == yourID && message.content.toLowerCase() == setupCMD){
@@ -426,7 +421,7 @@ bot.on("message", message => {
         }
     }
 })
-
+ 
 
 bot.on('raw', event => {
     if (event.t === 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
@@ -447,5 +442,22 @@ bot.on('raw', event => {
                 if (event.t === "MESSAGE_REACTION_ADD"){
                     memberObj.addRole(roleObj)
                 } else {
+                    memberObj.removeRole(roleObj);
+                }
+            }
+        }
+        })
+ 
+    }   
+});
+
+
+
+
+
+
+
+
+
 
 client.login(process.env.BOT_TOKEN);
