@@ -391,16 +391,16 @@ client.on('ready', function(){
 
 })
 
-
 const yourID = "200644160179535872"
-const setupCMD = "1bt"
+const setupCMD = "!createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const roles = ["Talker", "GAMING", "Family"];
-const reactions = ["💻", "🖌", "😃"];
-
+const roles = ["Talker", "GAMING"];
+const reactions = ["💻","😃",];
+const botToken = ""
 
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+bot.login(botToken);
 
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
 
@@ -447,8 +447,5 @@ bot.on('raw', event => {
                 if (event.t === "MESSAGE_REACTION_ADD"){
                     memberObj.addRole(roleObj)
                 } else {
-
-
-
 
 client.login(process.env.BOT_TOKEN);
