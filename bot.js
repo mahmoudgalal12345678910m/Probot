@@ -3,8 +3,8 @@ const client = new Discord.Client();
 const prefix = "1"
 const yourID = "200644160179535872"
 const setupCMD = "!createrolemessage"
-let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const roles = ["Family", "Gaming"];
+let initialMessage = `@everyone  وبيظهرلك شنلات فويس للى تبيه :tada:`;
+const roles = ["Talker", "GAMING"];
 const reactions = ["💻", "😃",];
 
 client.on('ready', () => {
@@ -405,7 +405,7 @@ if (roles.length !== reactions.length) throw "Roles list and reactions list are 
 function generateMessages(){
     var messages = [];
     messages.push(initialMessage);
-    for (let role of roles) messages.push(`React below to get the **"${role}"** role!`); //DONT CHANGE THIS
+    for (let role of roles) messages.push(`اضغط  على الايموجى ذا **"${role}"** لو تبى سيرفر`);
     return messages;
 }
 
@@ -451,9 +451,6 @@ client.on('raw', event => {
  
     }   
 });
-
-
-
 
 
 
