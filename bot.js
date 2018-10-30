@@ -408,7 +408,7 @@ function generateMessages(){
     return messages;
 }
 
-bot.on("message", message => {
+client.on("message", message => {
     if (message.author.id == yourID && message.content.toLowerCase() == setupCMD){
         var toSend = generateMessages();
         let mappedArray = [[toSend[0], false], ...toSend.slice(1).map( (message, idx) => [message, reactions[idx]])];
@@ -423,7 +423,7 @@ bot.on("message", message => {
 })
  
 
-bot.on('raw', event => {
+client.on('raw', event => {
     if (event.t === 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
         
         let channel = bot.channels.get(event.d.channel_id);
@@ -450,7 +450,6 @@ bot.on('raw', event => {
  
     }   
 });
-
 
 
 
