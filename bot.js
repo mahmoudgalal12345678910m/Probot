@@ -4,8 +4,8 @@ const prefix = "1"
 const yourID = "200644160179535872"
 const setupCMD = "!createrolemessage"
 let initialMessage = `@everyone  وبيظهرلك شنلات فويس للى تبيه :tada:`;
-const roles = ["Swalef", "GAMING"];
-const reactions = ["💻", "😃",];
+const roles = ["- GAMING .", "- Swalef ."];
+const reactions = [":GAMING:", ":Swalef:",];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -185,7 +185,7 @@ const bannedwords = [
 client.on('message',  message => {
   if(bannedwords.some(word => message.content.includes(word))) {
     message.delete()
-    message.reply(" احترم نفسك , يمنع الشتم في خادمنا او سوف تتعرض الي  ميوت ").then(msg => {msg.delete(5000)});;
+    message.reply(" احترم نفسك , يمنج الشتايم تمامنا هنا  ").then(msg => {msg.delete(5000)});;
   };
 });
 
@@ -230,8 +230,8 @@ client.on('message', async message => {
           .then(co => {
             text = co.first().content
 
-              message.channel.send(`تم حفظ اقتراحك الرجاء`)
-                client.channels.get("501934508178800640").send(`${message.author.username}'s said => ${text}`)
+              message.channel.send(`تم النشر`)
+                client.channels.get("508469157893898244").send(`${message.author.username}'s said => ${text}`)
 
               })
             }
@@ -405,7 +405,7 @@ if (roles.length !== reactions.length) throw "Roles list and reactions list are 
 function generateMessages(){
     var messages = [];
     messages.push(initialMessage);
-    for (let role of roles) messages.push(`اضغط  على الايموجى ذا **"${role}"** لو تبى سيرفر`);
+    for (let role of roles) messages.push(`اضغط  على الايموجى ذا **"${role}"** لو تبى كلام`);
     return messages;
 }
 
