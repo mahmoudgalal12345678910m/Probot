@@ -198,7 +198,7 @@ client.on('message',  message => {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome');
+    let channel = member.guild.channels.find('name', '✿-welcome-✿');
     let memberavatar = member.user.avatarURL
       if (!channel) return; 
     let embed = new Discord.RichEmbed()
@@ -379,7 +379,7 @@ message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخ�
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' 1help ','OneFamily | Server ' ];
+    var setGame = [' 1help ','Malicious™ | Server ' ];
     var i = -1;
     var j = 0;
     setInterval(function (){
