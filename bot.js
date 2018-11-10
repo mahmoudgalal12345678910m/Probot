@@ -5,7 +5,7 @@ const yourID = "200644160179535872"
 const setupCMD = "!createrolemessage"
 let initialMessage = `@everyone  وبيظهرلك شنلات فويس للى تبيه :tada:`;
 const roles = ["- GAMING .", "- Swalef ."];
-const reactions = ["https://cdn.discordapp.com/emojis/510873167053717515.png?v=1", "https://cdn.discordapp.com/emojis/510872989374480414.png?v=1",];
+const reactions = ["🔫", "🎩",];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
